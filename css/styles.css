@@ -1,3 +1,3 @@
-#questionNo, .trackName  {
+#questionFrontOrBack, #questionNo, .trackName  {
   display: none;
 }

@@ -4,7 +4,6 @@
 var language1Tally = 0;
 var language2Tally = 0;
 var language3Tally = 0;
-var language4Tally = 0;
 
 var tally = function(answerValue) {
   if (answerValue === "lang1") {
@@ -24,8 +23,20 @@ $(document).ready(function(){
     var studentNameInput = $("input#studentName").val();
     alert(studentNameInput);
     $("#studentInfo").fadeOut();
-    $("#questionNo").delay(400).fadeIn();
+    $("#questionFrontOrBack").delay(400).fadeIn();
 
+  });
+
+  $("#questionFrontOrBack").submit(function(event) {
+    event.preventDefault();
+    var answerFrontOrBack = $("input:radio[name=questionFrontOrBack]:checked").val();
+    console.log(answerFrontOrBack);
+    $("#questionFrontOrBack").fadeOut();
+    if (answerFrontOrBack === "front") {
+      $(".trackName").delay(400).fadeIn();
+    } else {
+      $("#questionNo").delay(400).fadeIn();
+    }
   });
 
   $("#questionNo").submit(function(event) {
