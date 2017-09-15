@@ -96,10 +96,6 @@ $(document).ready(function(){
 
     $("#questionAppeal").fadeOut();
     tally(answerAppeal);
-    console.log(javaTally);
-    console.log(cSharpTally);
-    console.log(phpTally);
-    console.log(studentNameInput);
 
     if (aversionWindows) {
       cSharpTally = 0;
@@ -119,16 +115,6 @@ $(document).ready(function(){
     }
   });
 
-  // this is the example question, scrap this later.
-  // $("#questionNo").submit(function(event) {
-  //   event.preventDefault();
-  //   var answer1 = $("input:radio[name=questionNo]:checked").val();
-  //
-  //   tally(answer1);
-  //   $("#questionNo").fadeOut();
-  //   $("resultsTrack").delay(400).fadeIn();
-  //
-  // });
 
   $("#reset").submit(function(event) {
     //this might not work, check the tally if they reset.

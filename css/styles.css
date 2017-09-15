@@ -1,3 +1,28 @@
+html, body {
+  height: 100%;
+  background-color: gray;
+}
 #questionFrontOrBack, #questionRuby, #questionWindows, #questionPurpose, #questionJob, #questionAppeal, .resultsTrack, .resultsNone  {
   display: none;
+}
+
+.survey {
+  width: 65%;
+}
+
+.studentName {
+  width: 300px;
+  padding-bottom: 10px;
+}
+
+.jumbotron {
+  font-style: italic;
+  background-color: #66ccff;
+}
+
+.container {
+  border: 1px solid black;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
 }

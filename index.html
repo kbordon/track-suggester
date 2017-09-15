@@ -8,14 +8,14 @@
     <title>Which Programming Language Should You Learn?</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container survey">
 
       <div class="jumbotron">
         <h2>Which Programming Language Should You Learn?</h2>
       </div>
 
       <form id="studentInfo">
-        <div class="form-Group">
+        <div class="form-Group studentName">
           <p><label for="studentName">Name:</label></p>
           <input id="studentName" class="form-control"  type="text">
         </div>
@@ -151,10 +151,12 @@
 
       <!-- results start here -->
       <div class="resultsTrack">
-        <h3><span class="studentName"></span>, you should take <span class="result"></span>!</h3>
-        <form id="reset">
-          <button type="submit" class="btn">Try Again</button>
-        </form>
+        <div class ="well">
+          <h3><span class="studentName"></span>, you should take <span class="result"></span>!</h3>
+          <form id="reset">
+            <button type="submit" class="btn">Try Again</button>
+          </form>
+        </div>
       </div>
 
       <div class="resultsNone">
@@ -163,11 +165,6 @@
           <button type="submit" class="btn">Try Again</button>
         </form>
       </div>
-
-
-
-      <!-- option personalized results -->
-
 
 
     </div>
