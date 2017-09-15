@@ -1,6 +1,10 @@
 html, body {
   height: 100%;
-  background-color: gray;
+  background-color: #d9d9d9;
+}
+
+h3 {
+  font-family: monospace;
 }
 #questionFrontOrBack, #questionRuby, #questionWindows, #questionPurpose, #questionJob, #questionAppeal, .resultsTrack, .resultsNone  {
   display: none;
@@ -21,8 +25,12 @@ html, body {
 }
 
 .container {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   height: 100%;
   background-color: white;
-  padding: 20px;
+  /*padding: 20px;*/
+}
+
+.well {
+  height: 50%;
 }

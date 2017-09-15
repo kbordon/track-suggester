@@ -22,7 +22,6 @@ $(document).ready(function(){
   $("#studentInfo").submit(function(event) {
     event.preventDefault();
     studentNameInput = $("input#studentName").val();
-    $(".studentName").prepend(studentNameInput);
 
     $("#studentInfo").fadeOut();
     $("#questionFrontOrBack").delay(400).fadeIn();
@@ -31,6 +30,7 @@ $(document).ready(function(){
 
   $("#questionFrontOrBack").submit(function(event) {
     event.preventDefault();
+    $(".studentName").prepend(studentNameInput);
     var answerFrontOrBack = $("input:radio[name=questionFrontOrBack]:checked").val();
 
     $("#questionFrontOrBack").fadeOut();

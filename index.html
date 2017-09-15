@@ -15,27 +15,31 @@
       </div>
 
       <form id="studentInfo">
-        <div class="form-Group studentName">
-          <p><label for="studentName">Name:</label></p>
-          <input id="studentName" class="form-control"  type="text">
+        <div class="well">
+          <div class="form-Group studentName">
+            <h3><label for="studentName">Enter your name:</label></h3>
+            <input id="studentName" class="form-control"  type="text">
+          </div>
         </div>
         <button type="submit" class="btn">Submit</button>
       </form>
 
       <!-- determine front or back end -->
       <form id="questionFrontOrBack">
-        <h3>Which interests you more?</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionFrontOrBack" value="front">
-            Layout and design of webpage, and enabling the user to navigate the content.
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionFrontOrBack" value="back">
-            The inner workings of the webpage or applications
-          </label>
+        <div class = "well">
+          <h3>Which interests you more?</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionFrontOrBack" value="front">
+              Layout and design of webpage, and enabling the user to navigate the content.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionFrontOrBack" value="back">
+              The inner workings of the webpage or applications
+            </label>
+          </div>
         </div>
 
         <button type="submit" class="btn">Submit</button>
@@ -153,10 +157,11 @@
       <div class="resultsTrack">
         <div class ="well">
           <h3><span class="studentName"></span>, you should take <span class="result"></span>!</h3>
-          <form id="reset">
-            <button type="submit" class="btn">Try Again</button>
-          </form>
+          <p>Or if you're not satisfied with your results, feel free to try again and be more careful with your answers.</p>
         </div>
+        <form id="reset">
+          <button type="submit" class="btn">Reset</button>
+        </form>
       </div>
 
       <div class="resultsNone">
