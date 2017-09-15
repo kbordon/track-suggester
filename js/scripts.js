@@ -59,6 +59,8 @@ $(document).ready(function(){
     } else if (answerMicrosoft === "hateMicrosoft") {
       windowsAversion = true;
       $("#questionPurpose").delay(400).fadeIn();
+    } else {
+      $("#questionPurpose").delay(400).fadeIn();
     }
 
   });
@@ -90,7 +92,7 @@ $(document).ready(function(){
     console.log(answerAppeal);
     $("#questionAppeal").fadeOut();
     tally(answerAppeal);
-    $(".result").delay(400).fadeIn();
+    $(".trackName").delay(500).fadeIn();
   });
 
   // this is the example question, scrap this later.
