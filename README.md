@@ -12,7 +12,7 @@ _This is a brief survey to help potential students determine the programming lan
 
 * Using terminal or favorite shell, clone the repository.
   * Or you can use a browser to download the .zip file from the Github web interface.
-* With either shell or browser, navigate to track-suggester folder.
+* With either shell or explorer, navigate to track-suggester folder.
 * Open the index.html file with your browser.
 * Follow page as per instruction to answer form.
 
@@ -22,7 +22,8 @@ Not really a bug so much as a aesthetic choice. Refrain from viewing through lar
 
 ## Future Plans
 
-* Add more input fields to get user's contact information.
+* Add more information to each result to better inform them why they were matched to that language.
+* Change user input fields to number and email types.
 
 ## Support and Contact
 
