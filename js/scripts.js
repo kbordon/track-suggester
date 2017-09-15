@@ -1,6 +1,4 @@
 // back
-//when you have researched, go back and replace the placeholder languages with their proper names.
-
 var javaTally = 0;
 var cSharpTally = 0;
 var phpTally = 0;
@@ -16,12 +14,16 @@ var tally = function(answerValue) {
 }
 
 // front
-
 $(document).ready(function(){
   var aversionWindows = 0;
+  var studentNameInput;
+  var result;
+
   $("#studentInfo").submit(function(event) {
     event.preventDefault();
-    var studentNameInput = $("input#studentName").val();
+    studentNameInput = $("input#studentName").val();
+    $(".studentName").prepend(studentNameInput);
+
     $("#studentInfo").fadeOut();
     $("#questionFrontOrBack").delay(400).fadeIn();
 
@@ -30,9 +32,11 @@ $(document).ready(function(){
   $("#questionFrontOrBack").submit(function(event) {
     event.preventDefault();
     var answerFrontOrBack = $("input:radio[name=questionFrontOrBack]:checked").val();
+
     $("#questionFrontOrBack").fadeOut();
     if (answerFrontOrBack === "front") {
-      $(".trackName").delay(500).fadeIn();
+      $(".result").text("CSS");
+      $(".resultsTrack").delay(500).fadeIn();
     } else {
       $("#questionRuby").delay(400).fadeIn();
     }
@@ -41,22 +45,24 @@ $(document).ready(function(){
   $("#questionRuby").submit(function(event) {
     event.preventDefault();
     var answerRuby = $("input:radio[name=questionRuby]:checked").val();
+
     $("#questionRuby").fadeOut();
     if (answerRuby === "yesRuby") {
-      $(".trackName").delay(500).fadeIn();
+      $(".result").text("Ruby");
+      $(".resultsTrack").delay(500).fadeIn();
     } else {
       $("#questionWindows").delay(400).fadeIn();
     }
   });
 
-//this will be the final question
   $("#questionWindows").submit(function(event) {
     event.preventDefault();
     var answerWindows = $("input:radio[name=questionWindows]:checked").val();
 
     $("#questionWindows").fadeOut();
     if (answerWindows === "loveWindows") {
-      $(".trackName").delay(400).fadeIn();
+      $(".resultsTrack").delay(500).fadeIn();
+      $(".result").text("C#");
     } else if (answerWindows === "hateWindows") {
       aversionWindows = true;
       $("#questionPurpose").delay(400).fadeIn();
@@ -93,20 +99,23 @@ $(document).ready(function(){
     console.log(javaTally);
     console.log(cSharpTally);
     console.log(phpTally);
-    console.log(aversionWindows);
+    console.log(studentNameInput);
 
     if (aversionWindows) {
       cSharpTally = 0;
     }
 
     if (javaTally > cSharpTally && javaTally > phpTally) {
-      $(".trackName").delay(500).fadeIn();
+      $(".result").text("Java");
+      $(".resultsTrack").delay(500).fadeIn();
     } else if (cSharpTally > javaTally && cSharpTally > phpTally) {
-      $(".trackName").delay(500).fadeIn();
+      $(".result").text("C#");
+      $(".resultsTrack").delay(500).fadeIn();
     } else if (phpTally > javaTally && phpTally > cSharpTally) {
-      $(".trackName").delay(500).fadeIn();
+      $(".result").text("PHP");
+      $(".resultsTrack").delay(500).fadeIn();
     } else {
-      $(".trackName").delay(500).fadeIn();
+      $(".resultsNone").delay(500).fadeIn();
     }
   });
 
@@ -117,7 +126,7 @@ $(document).ready(function(){
   //
   //   tally(answer1);
   //   $("#questionNo").fadeOut();
-  //   $(".trackName").delay(400).fadeIn();
+  //   $("resultsTrack").delay(400).fadeIn();
   //
   // });
 
