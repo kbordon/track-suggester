@@ -19,14 +19,27 @@ var tally = function(answerValue) {
 // front
 
 $(document).ready(function(){
+  $("#studentInfo").submit(function(event) {
+    event.preventDefault();
+    var studentNameInput = $("input#studentName").val();
+    alert(studentNameInput);
+    $("#studentInfo").fadeOut();
+    $("#questionNo").delay(400).fadeIn();
+
+  });
+
   $("#questionNo").submit(function(event) {
     event.preventDefault();
     var answer1 = $("input:radio[name=questionNo]:checked").val();
 
     tally(answer1);
     $("#questionNo").fadeOut();
-    $(".trackName").fadein();
+    $(".trackName").delay(400).fadeIn();
 
+  });
+
+  $("#reset").submit(function(event) {
+    //this might not work, check the tally if they reset.
   });
 
 }); //end of doc.ready
