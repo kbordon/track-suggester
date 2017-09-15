@@ -1,18 +1,18 @@
 // back
 //when you have researched, go back and replace the placeholder languages with their proper names.
 
-var language1Tally = 0;
-var language2Tally = 0;
-var language3Tally = 0;
+var javaTally = 0;
+var cSharpTally = 0;
+var phpTally = 0;
 
 var tally = function(answerValue) {
   if (answerValue === "lang1") {
-    language1Tally += 1;
+    javaTally += 1;
   } else if (answerValue == "lang2") {
-    language2Tally += 1;
+    cSharpTally += 1;
   } else if (answerValue == "lang3") {
-    language3Tally += 1;
-  }
+    phpTally += 1;
+  } 
 }
 
 // front
@@ -33,6 +33,18 @@ $(document).ready(function(){
     console.log(answerFrontOrBack);
     $("#questionFrontOrBack").fadeOut();
     if (answerFrontOrBack === "front") {
+      $(".trackName").delay(400).fadeIn();
+    } else {
+      $("#questionRuby").delay(400).fadeIn();
+    }
+  });
+
+  $("#questionRuby").submit(function(event) {
+    event.preventDefault();
+    var answerRuby = $("input:radio[name=questionRuby]:checked").val();
+    console.log(answerRuby);
+    $("#questionRuby").fadeOut();
+    if (answerRuby === "rubyYes") {
       $(".trackName").delay(400).fadeIn();
     } else {
       $("#questionNo").delay(400).fadeIn();
