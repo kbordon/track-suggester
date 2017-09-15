@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is a brief survey to help potential students determine the programming language that suit them. It will take a user's name, and then have them answer questions. Using branching and JavaScript, it will display one of five programming language, or failing to choose one, will encourage the user to try again._
+_This is a brief survey to help potential students determine the programming language that suit them. It will take a user's name, and then have them answer questions. Using branching and JavaScript, it will display one of five programming language, or failing to choose one, will encourage the user to try again. A preview of this survey can be seen at [here](https://kbordon.github.io/track-suggester) or copy this url "https://kbordon.github.io/track-suggester"._
 
 ## Setup/Installation Requirements
 
@@ -19,6 +19,10 @@ _This is a brief survey to help potential students determine the programming lan
 ## Known Bugs
 
 Not really a bug so much as a aesthetic choice. Refrain from viewing through large viewport to avoid giant negative spaces. If using a large desktop, for example, it is best to shrink browser window size for optimal viewing.
+
+## Future Plans
+
+* Add more input fields to get user's contact information.
 
 ## Support and Contact
 
