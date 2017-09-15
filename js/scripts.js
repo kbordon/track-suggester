@@ -6,11 +6,11 @@ var cSharpTally = 0;
 var phpTally = 0;
 
 var tally = function(answerValue) {
-  if (answerValue === "lang1") {
+  if (answerValue === "java") {
     javaTally += 1;
-  } else if (answerValue == "lang2") {
+  } else if (answerValue == "cSharp") {
     cSharpTally += 1;
-  } else if (answerValue == "lang3") {
+  } else if (answerValue == "php") {
     phpTally += 1;
   }
 }
@@ -18,7 +18,7 @@ var tally = function(answerValue) {
 // front
 
 $(document).ready(function(){
-  var windowsAversion;
+  var aversionWindows = 0;
   $("#studentInfo").submit(function(event) {
     event.preventDefault();
     var studentNameInput = $("input#studentName").val();
@@ -32,7 +32,7 @@ $(document).ready(function(){
     var answerFrontOrBack = $("input:radio[name=questionFrontOrBack]:checked").val();
     $("#questionFrontOrBack").fadeOut();
     if (answerFrontOrBack === "front") {
-      $(".trackName").delay(400).fadeIn();
+      $(".trackName").delay(500).fadeIn();
     } else {
       $("#questionRuby").delay(400).fadeIn();
     }
@@ -43,21 +43,22 @@ $(document).ready(function(){
     var answerRuby = $("input:radio[name=questionRuby]:checked").val();
     $("#questionRuby").fadeOut();
     if (answerRuby === "yesRuby") {
-      $(".trackName").delay(400).fadeIn();
+      $(".trackName").delay(500).fadeIn();
     } else {
-      $("#questionMicrosoft").delay(400).fadeIn();
+      $("#questionWindows").delay(400).fadeIn();
     }
   });
 
 //this will be the final question
-  $("#questionMicrosoft").submit(function(event) {
+  $("#questionWindows").submit(function(event) {
     event.preventDefault();
-    var answerMicrosoft = $("input:radio[name=questionMicrosoft]:checked").val();
-    $("#questionMicrosoft").fadeOut();
-    if (answerMicrosoft === "loveMicrosoft") {
+    var answerWindows = $("input:radio[name=questionWindows]:checked").val();
+
+    $("#questionWindows").fadeOut();
+    if (answerWindows === "loveWindows") {
       $(".trackName").delay(400).fadeIn();
-    } else if (answerMicrosoft === "hateMicrosoft") {
-      windowsAversion = true;
+    } else if (answerWindows === "hateWindows") {
+      aversionWindows = true;
       $("#questionPurpose").delay(400).fadeIn();
     } else {
       $("#questionPurpose").delay(400).fadeIn();
@@ -69,7 +70,6 @@ $(document).ready(function(){
     event.preventDefault();
     var answerPurpose = $("input:radio[name=questionPurpose]:checked").val();
 
-    console.log(answerPurpose);
     $("#questionPurpose").fadeOut();
     tally(answerPurpose);
     $("#questionJob").delay(400).fadeIn();
@@ -79,7 +79,6 @@ $(document).ready(function(){
     event.preventDefault();
     var answerJob = $("input:radio[name=questionJob]:checked").val();
 
-    console.log(answerJob);
     $("#questionJob").fadeOut();
     tally(answerJob);
     $("#questionAppeal").delay(400).fadeIn();
@@ -89,10 +88,26 @@ $(document).ready(function(){
     event.preventDefault();
     var answerAppeal = $("input:radio[name=questionAppeal]:checked").val();
 
-    console.log(answerAppeal);
     $("#questionAppeal").fadeOut();
     tally(answerAppeal);
-    $(".trackName").delay(500).fadeIn();
+    console.log(javaTally);
+    console.log(cSharpTally);
+    console.log(phpTally);
+    console.log(aversionWindows);
+
+    if (aversionWindows) {
+      cSharpTally = 0;
+    }
+
+    if (javaTally > cSharpTally && javaTally > phpTally) {
+      $(".trackName").delay(500).fadeIn();
+    } else if (cSharpTally > javaTally && cSharpTally > phpTally) {
+      $(".trackName").delay(500).fadeIn();
+    } else if (phpTally > javaTally && phpTally > cSharpTally) {
+      $(".trackName").delay(500).fadeIn();
+    } else {
+      $(".trackName").delay(500).fadeIn();
+    }
   });
 
   // this is the example question, scrap this later.
