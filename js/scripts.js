@@ -12,7 +12,7 @@ var tally = function(answerValue) {
     cSharpTally += 1;
   } else if (answerValue == "lang3") {
     phpTally += 1;
-  } 
+  }
 }
 
 // front
@@ -20,6 +20,7 @@ var tally = function(answerValue) {
 $(document).ready(function(){
   $("#studentInfo").submit(function(event) {
     event.preventDefault();
+    var windowsAversion;
     var studentNameInput = $("input#studentName").val();
     alert(studentNameInput);
     $("#studentInfo").fadeOut();
@@ -44,8 +45,24 @@ $(document).ready(function(){
     var answerRuby = $("input:radio[name=questionRuby]:checked").val();
     console.log(answerRuby);
     $("#questionRuby").fadeOut();
-    if (answerRuby === "rubyYes") {
+    if (answerRuby === "yesRuby") {
       $(".trackName").delay(400).fadeIn();
+    } else {
+      $("#questionMicrosoft").delay(400).fadeIn();
+    }
+  });
+
+  $("#questionMicrosoft").submit(function(event) {
+    event.preventDefault();
+    var answerMicrosoft = $("input:radio[name=questionMicrosoft]:checked").val();
+    console.log(answerMicrosoft);
+    $("#questionMicrosoft").fadeOut();
+    if (answerMicrosoft === "loveMicrosoft") {
+      $(".trackName").delay(400).fadeIn();
+    } else if (answerMicrosoft === "hateMicrosoft") {
+      windowsAversion = true;
+      console.log(windowsAversion);
+      $("#questionNo").delay(400).fadeIn();
     } else {
       $("#questionNo").delay(400).fadeIn();
     }
