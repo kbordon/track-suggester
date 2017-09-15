@@ -20,11 +20,30 @@
             <h4><label for="studentName">Enter your name:</label></h4>
             <input id="studentName" class="form-control"  type="text">
           </div>
+
           <!-- delete this if no timeV -->
-          <!-- <div class="form-Group studentName">
-            <h4><label for="studentName">How would you like to us to contact you?</label></h4>
-            <input id="studentName" class="form-control"  type="text">
-          </div>-->
+          <div class="form-group">
+            <label for="contactInfo">What's the best way to contact you?</label>
+            <input id="contactInfo" class="form-control" type="text">
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="contactType" value="email">
+              Email
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="contactType" value="phone">
+              Phone
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="contactType" value="address">
+              Mail Address
+            </label>
+          </div>
           <!-- delete this if no time^ -->
         </div>
 
@@ -176,8 +195,9 @@
       <!-- results start here -->
       <div class="resultsTrack">
         <div class ="well">
-          <h3><span class="studentName"></span>, you should take <span class="result"></span>!</h3>
-          <p>Or if you're not satisfied with your results, feel free to try again and be more careful with your answers.</p>
+          <h3><span class="studentName"></span>, you should take <strong><span class="result"></span></strong>!</h3>
+          <h4>Within a few days, we'll try to contact you by <span class="contactType"></span> at <span class="contactInfo"></span>.</h4>
+          <p><em>Or,</em> if you're not satisfied with your results, feel free to try again and be more careful with your answers.</p>
         </div>
         <form id="reset">
           <button type="submit" class="btn">Reset</button>
@@ -187,7 +207,7 @@
       <div class="resultsNone">
         <div class="well">
           <h3><span class="studentName"></span>,</h3>
-          <p>You didn't really seem to gravitate towards any particular language. Try answering the questions with a clearer purpose.</h3>
+          <p>You didn't really seem to gravitate towards any particular language. Try answering the questions with with more purpose.</h4>
         </div>
         <form id="reset">
           <button type="submit" class="btn">Try Again</button>

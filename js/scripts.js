@@ -33,6 +33,22 @@ $(document).ready(function(){
     $(".studentName").prepend(studentNameInput);
     var answerFrontOrBack = $("input:radio[name=questionFrontOrBack]:checked").val();
 
+    // delete starting here
+    var contactInfoInput = $("#contactInfo").val();
+    var contactTypeInput = $("input:radio[name=contactType]:checked").val();
+
+    if (contactTypeInput === "email") {
+      $(".contactType").prepend(contactTypeInput);
+      $(".contactInfo").prepend(contactInfoInput);
+    } else if (contactTypeInput === "phone") {
+      $(".contactType").prepend(contactTypeInput);
+      $(".contactInfo").prepend(contactInfoInput);
+    } else if (contactTypeInput === "address") {
+      $(".contactType").prepend(contactTypeInput);
+      $(".contactInfo").prepend(contactInfoInput);
+    }
+    // delete ends here
+
     $("#questionFrontOrBack").fadeOut();
     if (answerFrontOrBack === "front") {
       $(".result").text("CSS");
