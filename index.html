@@ -17,10 +17,9 @@
       <form id="studentInfo">
         <div class="well">
           <div class="form-Group studentName">
-            <h3><label for="studentName">Enter your name:</label></h3>
+            <h4><label for="studentName">Enter your name:</label></h4>
             <input id="studentName" class="form-control"  type="text">
           </div>
-        </div>
         <button type="submit" class="btn">Submit</button>
       </form>
 
@@ -47,18 +46,20 @@
 
       <!-- ruby or no -->
       <form id="questionRuby">
-        <h3>When it comes to the actual programming language, how to do you feel about syntax?</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionRuby" value="yesRuby">
-            Often the syntax can be mystifying, and I'd prefer something more direct and closer to human language.
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionRuby" value="noRuby">
-            Honestly, the more esoteric, the better!
-          </label>
+        <div class="well">
+          <h3>When it comes to the actual programming language, how to do you feel about syntax?</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionRuby" value="yesRuby">
+              Often the syntax can be mystifying, and I'd prefer something more direct and closer to human language.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionRuby" value="noRuby">
+              Honestly, the more esoteric, the better!
+            </label>
+          </div>
         </div>
 
         <button type="submit" class="btn">Submit</button>
@@ -66,90 +67,101 @@
 
       <!-- microsoft or maybe or no -->
       <form id="questionWindows">
-        <h3>How do you feel about Windows?</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionWindows" value="loveWindows">
-            Love them, I'd die for Bill Gates. I have a shrine to him in every window of my house.
-          </label>
+        <div class="well">
+          <h3>How do you feel about Windows?</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionWindows" value="loveWindows">
+              Love them, I'd die for Bill Gates. I have a shrine to him in every window of my house.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionWindows" value="impartialWindows">
+              I don't feel strongly either way.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionWindows" value="hateWindows">
+              <em>Ugh.</em> I can't stand them, bane of the computing world as far as I can tell. Swear they invented Windows just to break them.
+            </label>
+          </div>
         </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionWindows" value="impartialWindows">
-            I don't feel strongly either way.
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionWindows" value="hateWindows">
-            <em>Ugh.</em> I can't stand them, bane of the computing world as far as I can tell. Swear they invented Windows just to break them.
-          </label>
-        </div>
-      <button type="submit" class="btn">Submit</button>
+
+        <button type="submit" class="btn">Submit</button>
       </form>
 
       <!-- survey starts here -->
       <form id="questionPurpose">
-        <h3>What would you like to use the programming language for?</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionPurpose" value="java">
-            As much as I possibly can, from developing web apps to managing large enterprises. I'm versatile.
-          </label>
+        <div class="well">
+          <h3>What would you like to use the programming language for?</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionPurpose" value="java">
+              As much as I possibly can, from developing web apps to managing large enterprises. I'm versatile.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionPurpose" value="cSharp">
+              I'd like to work with large business infrastructures primarily.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionPurpose" value="php">
+              I want to work with companies that manage massive amounts of content, like WordPress.
+            </label>
+          </div>
         </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionPurpose" value="cSharp">
-            I'd like to work with large business infrastructures primarily.
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionPurpose" value="php">
-            I want to work with companies that manage massive amounts of content, like WordPress.
-          </label>
-        </div>
-      <button type="submit" class="btn">Submit</button>
+
+        <button type="submit" class="btn">Submit</button>
       </form>
 
       <form id="questionJob">
-        <h3>How concerned are you about entering the job market?</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionJob" value="java">
-            I would like to learn a programming language that will allow me the most opportunity for a position.
-          </label>
+        <div class="well">
+          <h3>How concerned are you about entering the job market?</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionJob" value="java">
+              I would like to learn a programming language that will allow me the most opportunity for a position.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionJob" value="no">
+              I thrive in competitive environments, <em>bring it on!</em>
+            </label>
+          </div>
         </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionJob" value="no">
-            I thrive in competitive environments, <em>bring it on!</em>
-          </label>
-        </div>
-      <button type="submit" class="btn">Submit</button>
+
+        <button type="submit" class="btn">Submit</button>
       </form>
 
       <form id="questionAppeal">
-        <h3>Which one appeals to you most?</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionAppeal" value="java">
-            Creating code and being able to move it between platforms easily, like PC to mobile.
-          </label>
+        <div class="well">
+          <h3>Which one appeals to you most?</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionAppeal" value="java">
+              Creating code and being able to move it between platforms easily, like PC to mobile.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionAppeal" value="cSharp">
+              Building internal software for bigger, established companies.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="questionAppeal" value="php">
+              Working with web servers, whether large- or small-scale.
+            </label>
+          </div>
         </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionAppeal" value="cSharp">
-            Building internal software for bigger, established companies.
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="questionAppeal" value="php">
-            Working with web servers, whether large- or small-scale.
-          </label>
-        </div>
-      <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </form>
 
 
@@ -165,7 +177,10 @@
       </div>
 
       <div class="resultsNone">
-        <h3><span class="studentName"></span>, you didn't really seem to gravitate towards any particular language. Try answering the questions with a clearer purpose.</h3>
+        <div class="well">
+          <h3><span class="studentName"></span>,</h3>
+          <p>You didn't really seem to gravitate towards any particular language. Try answering the questions with a clearer purpose.</h3>
+        </div>
         <form id="reset">
           <button type="submit" class="btn">Try Again</button>
         </form>
