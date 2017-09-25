@@ -19,6 +19,21 @@ $(document).ready(function(){
   var studentNameInput;
   var result;
 
+  $("input:radio[value=email]").click(function() {
+    $("#contactInfo").attr('type','email');
+    $("#contactInfo").attr('placeholder','JaneDoe@email.com');
+  });
+
+  $("input:radio[value=phone]").click(function() {
+    $("#contactInfo").attr('type','tel');
+    $("#contactInfo").attr('placeholder','555-5555');
+  });
+
+  $("input:radio[value=address]").click(function() {
+    $("#contactInfo").attr('type','text');
+    $("#contactInfo").attr('placeholder','123 Street Name, City, State Zip Code');
+  });
+
   $("#studentInfo").submit(function(event) {
     event.preventDefault();
     studentNameInput = $("input#studentName").val();
